@@ -1,85 +1,48 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import { ref, watch } from 'vue'
+
+const darkMode = ref(false)
+
+watch(darkMode, () => {
+  const html = document.documentElement.classList
+  if (darkMode.value) {
+    html.add('dark')
+  } else {
+    html.remove('dark')
+  }
+})
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <nav class="flex justify-center items-center mt-2">
+      <h1
+        class="font-semibold dark:text-white text-black transition-colors duration-500 ease-in-out"
+      >
+        Matthew Miller
+      </h1>
+      <div class="w-52 flex justify-center items-center scale-[60%]">
+        <label class="p-2 dark:text-white text-black font-semibold"> Light </label>
+        <input
+          type="checkbox"
+          class="absolute w-20 h-10 peer appearance-none rounded-md hover:cursor-pointer"
+          v-model="darkMode"
+        />
+        <span
+          class="w-16 h-10 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-gray-500 after:w-8 after:h-8 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 pointer-events-none"
+        ></span>
+        <label class="p-2 dark:text-white text-black font-semibold">Dark</label>
+      </div>
+      <div class="inline-block">
+        <font-awesome-icon icon="user" size="xl" />
+        <font-awesome-icon icon="fa-brands fa-github" size="xl" />
+        <font-awesome-icon icon="fa-brands fa-square-github" size="xl" />
+      </div>
+    </nav>
   </header>
 
   <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<style scoped></style>
