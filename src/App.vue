@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import { ref, watch } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import MainMenu from './components/MainMenu.vue'
 
 const darkMode = ref(false)
 const menuOpen = ref(false)
@@ -21,7 +22,7 @@ watch(menuOpen, () => {})
 <template>
   <header>
     <nav
-      class="fixed flex justify-start items-center px-4 py-2 top-4 left-4 right-4 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
+      class="w-3/4 fixed flex justify-start items-center px-4 py-2 top-4 left-1/2 -translate-x-1/2 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out drop-shadow-md"
     >
       <h1
         class="font-semibold text-2xl dark:text-white text-black transition-colors duration-300 ease-in-out"
@@ -76,16 +77,30 @@ watch(menuOpen, () => {})
   </header>
 
   <RouterView />
+  <Transition name="menu">
+    <MainMenu v-if="menuOpen"></MainMenu>
+  </Transition>
 </template>
 
 <style scoped>
+/* Transitions for menu icons */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease-in-out;
 }
-
 .v-enter-from,
 .v-leave-to {
+  opacity: 0;
+}
+
+/* Transitions for opening and closing the menu */
+.menu-enter-active,
+.menu-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+.menu-enter-from,
+.menu-leave-to {
+  transform: translateY(300px);
   opacity: 0;
 }
 </style>
