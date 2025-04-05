@@ -1,26 +1,43 @@
 <script setup>
-import { RouterView } from 'vue-router'
-import { ref, watch } from 'vue'
+import { RouterView, useRouter } from 'vue-router'
+import { onMounted, ref, watch } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import MainMenu from './components/MainMenu.vue'
 
-const darkMode = ref(false)
+const router = useRouter()
+const darkMode = ref(true)
 const menuOpen = ref(false)
 
-// toggles between light and dark mode
+// set the theme when darkmode toggle changes
 watch(darkMode, () => {
+  setTheme()
+})
+
+onMounted(() => {
+  setTheme()
+})
+
+// set dark or light mode
+function setTheme() {
   const html = document.documentElement.classList
   if (darkMode.value) {
     html.add('dark')
   } else {
     html.remove('dark')
   }
-})
+}
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value
 }
 
+// close the menu when router view state is updated
+watch(
+  () => router.currentRoute.value,
+  () => {
+    menuOpen.value = false
+  },
+)
 // prevents scrolling when the menu is open
 watch(menuOpen, () => {
   const html = document.documentElement.classList

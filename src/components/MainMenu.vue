@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const menuItems = ref(['About', 'Projects', 'Contact', 'CV'])
+const menuItems = ref(['Home', 'About', 'Projects', 'Contact', 'CV'])
 </script>
 <template>
   <div
@@ -17,14 +17,11 @@ const menuItems = ref(['About', 'Projects', 'Contact', 'CV'])
           class="py-2"
           :style="{ transitionDelay: `${index * 100}ms` }"
         >
-          {{ menuItem }}
+          <router-link :to="'/' + (menuItem !== 'Home' ? menuItem : '')">
+            {{ menuItem }}
+          </router-link>
         </p>
       </transition-group>
-
-      <!-- <p class="py-2 transition-all delay-200 hover:translate-y-5">About</p>
-      <p class="py-2 transition-all delay-300">Projects</p>
-      <p class="py-2 transition-all delay-[400ms] translate-y-5">Contact</p>
-      <p class="py-2 transition-all delay-500">CV</p> -->
     </div>
   </div>
 </template>
