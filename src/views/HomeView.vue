@@ -3,18 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 </script>
 <template>
   <main>
-    <div class="w-full flex justify-evenly">
+    <div
+      class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-4"
+    >
       <div
-        class="w-1/2 h-96 mr-6 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-300 dark:border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
+        class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-300 dark:border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-all duration-300 ease-in-out"
       >
-        <img :src="'/img/matthewmiller.JPEG'" alt="" class="h-72 rounded-md shadow-md" />
-        <p
-          class="p-2 flex items-center text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
-        >
+        <img :src="'/img/matthewmiller.JPEG'" alt="" class="max-h-72 rounded-md shadow-md" />
+        <p class="p-2 flex items-center transition-colors duration-300 ease-in-out">
           <font-awesome-icon
             icon="fa-location-dot"
             size="lg"
-            class="mr-2 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
+            class="mr-2 transition-colors duration-300 ease-in-out"
           />
           <a href="https://maps.app.goo.gl/R6XXiDs4XcSgxh54A" class="hover:underline"
             >Lake Bled, Slovenia</a
@@ -22,7 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         </p>
       </div>
       <div
-        class="p-6 w-1/2 ml-6 text-gray-600 dark:text-gray-300 flex justify-center flex-col border-t-4 border-r-4 border-gray-300 dark:border-gray-500 shadow-md rounded-md transition-colors duration-300 ease-in-out"
+        class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-gray-300 dark:border-gray-500 bg-gradient-to-bl from-gray-100 to-gray-50 dark:bg-gradient-to-bl dark:from-gray-700/75 dark:to-gray-800/75 shadow-md rounded-md transition-all duration-300 ease-in-out"
       >
         <h1 class="text-4xl">Hi, I'm Matt</h1>
         <p class="text-xl mt-2">
@@ -32,37 +32,39 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         </p>
       </div>
     </div>
-    <div class="mt-6 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out">
-      <h1 class="text-center p-2 mt-14 text-4xl">Tools I'm Currently Using</h1>
+    <div
+      class="mt-12 py-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
+    >
+      <h1 class="text-center pb-2 text-4xl">Tools I'm Currently Using</h1>
       <h2 class="text-center p-6 text-2xl">Frontend Development</h2>
       <div>
         <ul class="text-center">
           <li
-            class="mr-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="mx-1 mb-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-html5" size="2xl" class="pr-2" />
             <span>Html</span>
           </li>
           <li
-            class="mr-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="mx-1 mb-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-css" size="2xl" class="pr-2" />
             <span>CSS</span>
           </li>
           <li
-            class="mr-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="mx-1 mb-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-js" size="2xl" class="pr-2" />
             <span>Javascript</span>
           </li>
           <li
-            class="mr-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="mx-1 mb-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-vuejs" size="2xl" class="pr-2" />
             <span>Vue.js</span>
           </li>
           <li
-            class="mr-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="mx-1 mb-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <!-- Tailwind Icon -->
             <svg
@@ -82,10 +84,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
             <span>Tailwind CSS</span>
           </li>
           <li
-            class="px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="px-4 mx-1 mb-2 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-bootstrap" size="2xl" class="pr-2" />
-            <span>Bootsrap</span>
+            <span>Bootstrap</span>
           </li>
         </ul>
       </div>
@@ -93,7 +95,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       <div>
         <ul class="text-center">
           <li
-            class="mr-2 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="mx-1 px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <!-- Expressjs Icon -->
             <svg
@@ -117,7 +119,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
             <span>Express.js</span>
           </li>
           <li
-            class="px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="px-4 mx-1 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-bootstrap" size="2xl" class="pr-2" />
             <span>PHP</span>
@@ -128,7 +130,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       <div>
         <ul class="text-center">
           <li
-            class="px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="px-4 mx-1 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <!-- MYSQL Icon -->
             <svg
@@ -153,12 +155,24 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       <div>
         <ul class="text-center">
           <li
-            class="px-4 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700"
+            class="px-4 mx-1 py-2 inline-flex items-center shadow-md rounded-4xl bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
           >
             <font-awesome-icon icon="fa-brands fa-git-alt" size="2xl" class="pr-2" />
             <span>Git</span>
           </li>
         </ul>
+      </div>
+    </div>
+    <div
+      class="mt-12 py-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
+    >
+      <h1 class="text-center mb-8 text-4xl">Projects I'm Currently Working On</h1>
+      <div class="flex justify-center items-center">
+        <div
+          class="p-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+        >
+          <img :src="'/img/project_rae_smith.png'" alt="" class="h-72 rounded-md" />
+        </div>
       </div>
     </div>
   </main>
