@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-4"
     >
       <div
-        class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-300 dark:border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-all duration-300 ease-in-out"
+        class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-300 dark:border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
       >
         <img :src="'/img/matthewmiller.JPEG'" alt="" class="max-h-72 rounded-md shadow-md" />
         <p class="p-2 flex items-center transition-colors duration-300 ease-in-out">
@@ -22,7 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         </p>
       </div>
       <div
-        class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-gray-300 dark:border-gray-500 bg-gradient-to-bl from-gray-100 to-gray-50 dark:bg-gradient-to-bl dark:from-gray-700/75 dark:to-gray-800/75 shadow-md rounded-md transition-all duration-300 ease-in-out"
+        class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-gray-300 dark:border-gray-500 bg-gradient-to-bl from-gray-100 to-gray-50 dark:bg-gradient-to-bl dark:from-gray-700/75 dark:to-gray-800/75 shadow-md rounded-md transition-colors duration-300 ease-in-out"
       >
         <h1 class="text-4xl">Hi, I'm Matt</h1>
         <p class="text-xl mt-2">
@@ -169,9 +169,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       <h1 class="text-center mb-8 text-4xl">Projects I'm Currently Working On</h1>
       <div class="flex justify-center items-center">
         <div
-          class="p-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+          class="p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
           <img :src="'/img/project_rae_smith.png'" alt="" class="h-72 rounded-md" />
+        </div>
+        <div
+          class="p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+        >
+          <img :src="'/img/project_pentique.png'" alt="" class="h-72 rounded-md" />
         </div>
       </div>
     </div>
