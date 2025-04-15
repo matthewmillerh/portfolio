@@ -169,14 +169,21 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       <h1 class="text-center mb-8 text-4xl">Projects I'm Currently Working On</h1>
       <div class="flex justify-center items-center">
         <div
-          class="p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+          class="w-1/2 p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
+          <h1>Artist Portfolio Website</h1>
           <img :src="'/img/project_rae_smith.png'" alt="" class="h-72 rounded-md" />
         </div>
         <div
-          class="p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+          class="w-1/2 p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
+          <h1 class="mb-2">Online Store for Small Business</h1>
           <img :src="'/img/project_pentique.png'" alt="" class="h-72 rounded-md" />
+          <p>
+            This project was originally written in PHP and includes a content management system for
+            the user. It had some security issues as I was quite a novice when I first made it. I am
+            in the process of rewriting the entire website using Vue.js with an Express.js backend.
+          </p>
         </div>
       </div>
     </div>

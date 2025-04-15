@@ -17,9 +17,10 @@ const menuItems = ref(['Home', 'About', 'Projects', 'Contact', 'CV'])
           class="py-2"
           :style="{ transitionDelay: `${index * 100}ms` }"
         >
-          <router-link :to="'/' + (menuItem !== 'Home' ? menuItem : '')">
+          <!-- <router-link :to="'/' + (menuItem !== 'Home' ? menuItem : '')">
             {{ menuItem }}
-          </router-link>
+          </router-link> -->
+          {{ menuItem }}
         </p>
       </transition-group>
     </div>

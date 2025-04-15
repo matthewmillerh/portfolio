@@ -77,7 +77,7 @@ watch(menuOpen, () => {
       </h1>
 
       <div class="inline-flex items-center justify-center gap-2">
-        <div class="flex justify-start items-center">
+        <div class="flex justify-start items-center relative">
           <label class="py-2 mr-2 dark:text-white text-black text-sm">Light</label>
           <input
             type="checkbox"
@@ -123,7 +123,7 @@ watch(menuOpen, () => {
     </nav>
   </header>
 
-  <div class="mt-40 z-10" :class="menuOpen ? 'overflow-hidden' : ''">
+  <div class="mt-40 z-10">
     <RouterView />
   </div>
 
