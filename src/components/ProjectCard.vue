@@ -32,11 +32,15 @@ defineProps({
 
     <!-- Button links to the project -->
     <div class="mt-4 flex justify-center gap-2">
-      <button class="inline-flex items-center px-4 py-2 bg-slate-600 rounded-md shadow-md">
+      <button
+        class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"
+      >
         <span class="mr-2 font-semibold">Visit Live Site</span>
         <span><font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" /></span>
       </button>
-      <button class="inline-flex items-center px-4 py-2 bg-slate-600 rounded-md shadow-md">
+      <button
+        class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"
+      >
         <span class="mr-2 font-semibold">View Github Repo</span>
         <span><font-awesome-icon icon="fa-brands fa-github" size="xl" /></span>
       </button>
