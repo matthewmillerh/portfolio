@@ -21,7 +21,7 @@ onMounted(() => {
   } else if (storedTheme === 'false') {
     darkMode.value = false
   } else {
-    // Default theme if none stored in localstorage
+    // Default theme if none stored in localstorage (dark)
     darkMode.value = true
   }
   setTheme(darkMode.value)
@@ -73,7 +73,7 @@ watch(menuOpen, () => {
       <h1
         class="font-semibold text-2xl dark:text-white text-black transition-colors duration-300 ease-in-out"
       >
-        Matthew Miller
+        <router-link to="/">Matthew Miller</router-link>
       </h1>
 
       <div class="inline-flex items-center justify-center gap-2">

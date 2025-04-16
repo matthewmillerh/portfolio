@@ -1,12 +1,15 @@
 <script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ProjectCard from '@/components/ProjectCard.vue'
 </script>
 <template>
   <main>
     <div class="w-full flex flex-col items-center gap-8">
       <!-- Artist portfolio website -->
-      <ProjectCard image-name="project_rae_smith.png" repo-name="raesmith" live-link="">
+      <ProjectCard
+        image-name="project_rae_smith.png"
+        repo-name="raesmith"
+        live-link="https://raesmith.netlify.app/"
+      >
         <template #project-title>Artist Portfolio Website</template>
         <template #date>2024 - present</template>
         <template #description>
@@ -57,7 +60,14 @@ import ProjectCard from '@/components/ProjectCard.vue'
       >
         <template #project-title>Photo Gallery Website for Cape Town Art Gallery</template>
         <template #date>2015 (offline)</template>
-        <template #description>Test</template>
+        <template #description
+          >The Photographers Gallery ZA website was a digital platform designed for a Cape
+          Town-based photography gallery to showcase its collection, promote exhibitions, and engage
+          with the local art community. The website served as a virtual extension of the gallery,
+          providing an accessible and visually appealing interface for photography enthusiasts,
+          artists, and collectors to explore the gallery's offerings. There is no live site and all
+          images have been blurred.</template
+        >
       </ProjectCard>
     </div>
   </main>
