@@ -68,7 +68,7 @@ watch(menuOpen, () => {
       ></div>
     </div>
     <nav
-      class="w-4/5 fixed flex flex-col gap-2 md:gap-8 md:flex-row md:justify-start items-start md:items-center px-4 py-2 top-4 left-1/2 -translate-x-1/2 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out shadow-md z-60"
+      class="w-[95%] md:w-4/5 fixed flex flex-col gap-2 md:gap-8 md:flex-row md:justify-start items-start md:items-center px-4 py-2 top-4 left-1/2 -translate-x-1/2 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out shadow-md z-60"
     >
       <h1
         class="font-semibold text-2xl dark:text-white text-black transition-colors duration-300 ease-in-out"
