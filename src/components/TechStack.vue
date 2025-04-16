@@ -83,9 +83,6 @@ onMounted(() => {
       ></div>
     </div>
     <ul class="text-sm">
-      {{
-        console.log('hello' + languageList)
-      }}
       <li v-for="(language, index) in languageList" :key="index" class="inline-block h-4 mt-1">
         <p class="px-2">
           <span

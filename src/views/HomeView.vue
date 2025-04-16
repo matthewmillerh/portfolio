@@ -10,7 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-300 dark:border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
       >
         <img :src="'/img/matthewmiller.JPEG'" alt="" class="max-h-72 rounded-md shadow-md" />
-        <p class="p-2 flex items-center transition-colors duration-300 ease-in-out">
+        <p
+          class="-mt-10 flex items-center transition-colors duration-300 ease-in-out bg-black/15 backdrop-blur-xs shadow-md shadow-black/50 px-2 py-1 rounded-xl text-white"
+        >
           <font-awesome-icon
             icon="fa-location-dot"
             size="lg"
@@ -20,6 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
             >Lake Bled, Slovenia</a
           >
         </p>
+        <p class="mt-4 font-semibold">I'm based in Cape Town, South Africa</p>
       </div>
       <div
         class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-gray-300 dark:border-gray-500 bg-gradient-to-bl from-gray-100 to-gray-50 dark:bg-gradient-to-bl dark:from-gray-700/75 dark:to-gray-800/75 shadow-md rounded-md transition-colors duration-300 ease-in-out"

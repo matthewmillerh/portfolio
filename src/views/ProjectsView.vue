@@ -56,7 +56,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
       <ProjectCard
         image-name="project_photographersgalleryza.png"
         repo-name="thephotographersgallery"
-        live-link=""
+        live-link="https://github.com/matthewmillerh/thephotographersgallery"
       >
         <template #project-title>Photo Gallery Website for Cape Town Art Gallery</template>
         <template #date>2015 (offline)</template>
