@@ -12,8 +12,15 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // Import the Vue component
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-// Import specific icons you want to use
-import { faUser, faBars, faXmark, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+// Import specific icons for use
+import {
+  faUser,
+  faBars,
+  faXmark,
+  faLocationDot,
+  faArrowUpRightFromSquare,
+  faDiagramProject,
+} from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
   faGithubSquare,
@@ -43,6 +50,8 @@ library.add(
   faCss,
   faHtml5,
   faGitAlt,
+  faArrowUpRightFromSquare,
+  faDiagramProject,
 )
 
 const app = createApp(App)

@@ -164,27 +164,68 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       </div>
     </div>
     <div
-      class="mt-12 py-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
+      class="mt-12 py-8 px-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
     >
-      <h1 class="text-center mb-8 text-4xl">Projects I'm Currently Working On</h1>
-      <div class="flex justify-center items-center">
+      <h1 class="text-center mb-8 text-4xl">My Projects</h1>
+      <div
+        class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-8"
+      >
         <div
-          class="w-1/2 p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+          class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
-          <h1>Artist Portfolio Website</h1>
-          <img :src="'/img/project_rae_smith.png'" alt="" class="h-72 rounded-md" />
+          <h1 class="mb-2 font-semibold">
+            Artist Portfolio Website
+            <span class="ml-2">
+              <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+            </span>
+          </h1>
+          <img :src="'/img/project_rae_smith.png'" alt="" class="max-h-72 rounded-md shadow-md" />
         </div>
         <div
-          class="w-1/2 p-4 m-4 rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+          class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
-          <h1 class="mb-2">Online Store for Small Business</h1>
-          <img :src="'/img/project_pentique.png'" alt="" class="h-72 rounded-md" />
-          <p>
+          <a href="https://www.pentique.co.za" target="_blank">
+            <h1 class="mb-2 font-semibold text-center">
+              Online Store for Small Business
+              <span class="ml-2">
+                <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+              </span>
+            </h1>
+            <img :src="'/img/project_pentique.png'" alt="" class="max-h-72 rounded-md" />
+          </a>
+          <p class="hidden">
             This project was originally written in PHP and includes a content management system for
             the user. It had some security issues as I was quite a novice when I first made it. I am
             in the process of rewriting the entire website using Vue.js with an Express.js backend.
           </p>
         </div>
+      </div>
+      <div
+        class="mt-8 w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-8"
+      >
+        <div
+          class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+        >
+          <a href="https://matthewmillerh-itinerary.netlify.app/" target="_blank" class="block">
+            <h1 class="mb-2 font-semibold text-center">
+              Travel Itinerary Website
+              <span class="ml-2">
+                <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+              </span>
+            </h1>
+            <img :src="'/img/project_itinerary.png'" alt="" class="max-h-72 rounded-md shadow-md"
+          /></a>
+        </div>
+      </div>
+      <div class="flex justify-center mt-6">
+        <router-link to="/projects">
+          <button
+            class="w-44 h-16 cursor-pointer flex justify-center items-center shadow-md rounded-xl font-semibold bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition duration-500 ease-in-out dark:hover:bg-gradient-to-br dark:hover:from-gray-700 dark:hover:to-gray-600 hover:bg-gradient-to-br hover:from-gray-200 hover:to-gray-100 dark:hover:shadow-lg dark:hover:shadow-gray-900 hover:shadow-gray-500 hover:shadow-lg"
+          >
+            <span class="mr-2"><font-awesome-icon icon="fa-diagram-project" size="sm" /></span>
+            View My Projects
+          </button>
+        </router-link>
       </div>
     </div>
   </main>
