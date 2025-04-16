@@ -173,31 +173,30 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         <div
           class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
-          <h1 class="mb-2 font-semibold">
+          <h1 class="font-semibold">
             Artist Portfolio Website
             <span class="ml-2">
               <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
             </span>
           </h1>
-          <img :src="'/img/project_rae_smith.png'" alt="" class="max-h-72 rounded-md shadow-md" />
+          <img
+            :src="'/img/project_rae_smith.png'"
+            alt=""
+            class="mt-2 max-h-72 rounded-md shadow-md"
+          />
         </div>
         <div
           class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
           <a href="https://www.pentique.co.za" target="_blank">
-            <h1 class="mb-2 font-semibold text-center">
+            <h1 class="font-semibold text-center">
               Online Store for Small Business
               <span class="ml-2">
                 <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
               </span>
             </h1>
-            <img :src="'/img/project_pentique.png'" alt="" class="max-h-72 rounded-md" />
+            <img :src="'/img/project_pentique.png'" alt="" class="mt-2 max-h-72 rounded-md" />
           </a>
-          <p class="hidden">
-            This project was originally written in PHP and includes a content management system for
-            the user. It had some security issues as I was quite a novice when I first made it. I am
-            in the process of rewriting the entire website using Vue.js with an Express.js backend.
-          </p>
         </div>
       </div>
       <div
@@ -207,13 +206,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
           class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
         >
           <a href="https://matthewmillerh-itinerary.netlify.app/" target="_blank" class="block">
-            <h1 class="mb-2 font-semibold text-center">
+            <h1 class="font-semibold text-center">
               Travel Itinerary Website
               <span class="ml-2">
                 <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
               </span>
             </h1>
-            <img :src="'/img/project_itinerary.png'" alt="" class="max-h-72 rounded-md shadow-md"
+            <img
+              :src="'/img/project_itinerary.png'"
+              alt=""
+              class="mt-2 max-h-72 rounded-md shadow-md"
           /></a>
         </div>
       </div>

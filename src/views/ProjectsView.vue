@@ -1,36 +1,106 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import TechStack from '@/components/TechStack.vue'
 </script>
 <template>
   <main>
-    <div class="w-full flex justify-evenly">
+    <div class="w-full flex flex-col items-center gap-8">
+      <!-- Artist portfolio website -->
       <div
-        class="w-1/2 h-96 mr-6 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out"
+        class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
       >
-        <img :src="'/img/matthewmiller.JPEG'" alt="" class="h-72 rounded-md shadow-md" />
-        <p
-          class="p-2 flex items-center text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
-        >
-          <font-awesome-icon
-            icon="fa-location-dot"
-            size="lg"
-            class="mr-2 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
+        <a href="https://www.pentique.co.za" target="_blank" class="text-center">
+          <h1 class="font-semibold">
+            Artist Portfolio Website
+            <span class="ml-2">
+              <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+            </span>
+          </h1>
+          <p class="italic text-sm">2024 - present</p>
+          <img
+            :src="'/img/project_rae_smith.png'"
+            alt=""
+            class="mt-2 max-h-96 rounded-md shadow-md"
           />
-          <a href="https://maps.app.goo.gl/R6XXiDs4XcSgxh54A" class="hover:underline"
-            >Lake Bled, Slovenia</a
-          >
+        </a>
+        <p class="mt-4 w-full md:w-4/5 text-justify">
+          This project is an ongoing effort to create a dedicated online portfolio for South African
+          artist Emily Rae Smith Labuschagne. The final website will provide an efficient and
+          professional platform to showcase her artistic works.
         </p>
+        <TechStack repo-prop="raesmith" />
       </div>
+
+      <!-- Online Store for small business -->
       <div
-        class="p-6 w-1/2 ml-6 text-gray-600 dark:text-gray-300 flex justify-center flex-col border-t-4 border-r-4 border-gray-500 shadow-md rounded-md"
+        class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
       >
-        <h1 class="text-4xl">Hi, I'm Matt</h1>
-        <p class="text-xl mt-2">
-          I create streamlined web solutions by simplifying the complex. I appreciate the beauty of
-          minimalism but also thrive when diving into the chaos and intricacies of challenging
-          projects.
+        <a href="https://www.pentique.co.za" target="_blank" class="text-center">
+          <h1 class="font-semibold">
+            Online Store for Small Business
+            <span class="ml-2">
+              <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+            </span>
+          </h1>
+          <p class="italic text-sm">2024 - present</p>
+          <img :src="'/img/project_pentique.png'" alt="" class="mt-2 max-h-96 rounded-md" />
+        </a>
+        <p class="mt-4 w-full md:w-4/5 text-justify">
+          Originally developed in PHP with a custom content management system, this website is
+          undergoing a complete rewrite using a modern tech stack. The project is transitioning to a
+          Vue.js frontend and an Express.js backend to enhance performance, security, and
+          maintainability, addressing previous vulnerabilities identified in the initial
+          implementation.
         </p>
+        <TechStack repo-prop="pentique" />
+      </div>
+
+      <!-- Travel Itinerary Website -->
+      <div
+        class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+      >
+        <a href="https://matthewmillerh-itinerary.netlify.app/" target="_blank" class="text-center">
+          <h1 class="font-semibold">
+            Travel Itinerary Website
+            <span class="ml-2">
+              <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+            </span>
+          </h1>
+          <p class="italic text-sm">2024</p>
+          <img
+            :src="'/img/project_itinerary.png'"
+            alt=""
+            class="mt-2 max-h-96 rounded-md shadow-md"
+        /></a>
+        <p class="mt-4 w-full md:w-4/5 text-justify">Description</p>
+        <TechStack repo-prop="itinerary" />
+      </div>
+
+      <!-- The Photographers Gallery ZA -->
+      <div
+        class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+      >
+        <a
+          href="https://github.com/matthewmillerh/thephotographersgallery"
+          target="_blank"
+          class="text-center"
+        >
+          <h1 class="font-semibold">
+            Photo Gallery Website for Cape Town Art Gallery
+            <span class="ml-2">
+              <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
+            </span>
+          </h1>
+          <p class="italic text-sm">2015 (offline)</p>
+          <img
+            :src="'/img/project_photographersgalleryza.png'"
+            alt=""
+            class="mt-2 max-h-96 rounded-md shadow-md"
+        /></a>
+        <p class="mt-4 w-full md:w-4/5 text-justify">Description</p>
+        <TechStack repo-prop="thephotographersgallery" />
       </div>
     </div>
   </main>
 </template>
+<style scoped></style>
