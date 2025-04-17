@@ -11,13 +11,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       >
         <img :src="'/img/matthewmiller.JPEG'" alt="" class="max-h-72 rounded-md shadow-md" />
         <p
-          class="-mt-10 flex items-center transition-colors duration-300 ease-in-out bg-black/15 backdrop-blur-xs shadow-md shadow-black/50 px-2 py-1 rounded-xl text-white"
+          class="-mt-10 flex items-center bg-black/50 backdrop-blur-xs px-2 py-1 rounded-xl text-white"
         >
-          <font-awesome-icon
-            icon="fa-location-dot"
-            size="lg"
-            class="mr-2 transition-colors duration-300 ease-in-out"
-          />
+          <font-awesome-icon icon="fa-location-dot" size="lg" class="mr-2" />
           <a href="https://maps.app.goo.gl/R6XXiDs4XcSgxh54A" class="hover:underline"
             >Lake Bled, Slovenia</a
           >
@@ -38,7 +34,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     <div
       class="mt-12 py-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
     >
-      <h1 class="text-center pb-2 text-4xl">Tools I'm Currently Using</h1>
+      <h1 class="text-center pb-2 text-4xl font-semibold">Tools I'm Currently Using</h1>
       <h2 class="text-center p-6 text-2xl">Frontend Development</h2>
       <div>
         <ul class="text-center">
@@ -169,7 +165,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     <div
       class="mt-12 py-8 px-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
     >
-      <h1 class="text-center mb-8 text-4xl">My Projects</h1>
+      <h1 class="text-center mb-8 text-4xl font-semibold">My Projects</h1>
       <div
         class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-8"
       >

@@ -76,7 +76,7 @@ watch(menuOpen, () => {
         <router-link to="/">Matthew Miller</router-link>
       </h1>
 
-      <div class="inline-flex items-center justify-center gap-2">
+      <div class="inline-flex items-center justify-center gap-4">
         <div class="flex justify-start items-center relative">
           <label class="py-2 mr-2 dark:text-white text-black text-sm">Light</label>
           <input
@@ -89,16 +89,20 @@ watch(menuOpen, () => {
           ></span>
           <label class="py-2 ml-2 dark:text-white text-black text-sm">Dark</label>
         </div>
-        <font-awesome-icon
-          icon="fa-brands fa-linkedin"
-          size="2xl"
-          class="p-1 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
-        />
-        <font-awesome-icon
-          icon="fa-brands fa-square-github"
-          size="2xl"
-          class="p-1 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
-        />
+        <a href="https://www.linkedin.com/in/matthew-miller-919bb7312/" target="_blank">
+          <font-awesome-icon
+            icon="fa-brands fa-linkedin"
+            size="2xl"
+            class="p-1 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
+          />
+        </a>
+        <a href="https://github.com/matthewmillerh" target="_blank">
+          <font-awesome-icon
+            icon="fa-brands fa-square-github"
+            size="2xl"
+            class="p-1 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
+          />
+        </a>
       </div>
       <div class="flex items-center absolute right-2 h-10 w-10">
         <Transition>

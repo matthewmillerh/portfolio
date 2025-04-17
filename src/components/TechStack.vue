@@ -49,11 +49,6 @@ async function fetchTechStack() {
 
     // Sort languages by percentage (descending)
     languageList.value.sort((a, b) => b.bytes - a.bytes)
-
-    // Handle empty case
-    if (languageList.value.length === 0) {
-      //languageList.innerHTML = '<li>No languages detected</li>'
-    }
   } catch (error) {
     console.error('Error:', error)
     //document.getElementById('language-list').innerHTML = '<li>Error loading tech stack</li>'

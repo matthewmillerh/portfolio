@@ -32,7 +32,7 @@ defineProps({
     <!-- Button links to the project -->
     <div class="mt-4 flex justify-center gap-2 flex-col md:flex-row">
       <a
-        v-if="liveLink"
+        v-if="!(repoName == 'thephotographersgallery')"
         :href="liveLink"
         target="_blank"
         class="inline-flex items-center justify-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"

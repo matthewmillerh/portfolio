@@ -4,6 +4,8 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <template>
   <main>
     <div class="w-full flex flex-col items-center gap-8">
+      <h1 class="text-4xl font-semibold">My Projects</h1>
+
       <!-- Artist portfolio website -->
       <ProjectCard
         image-name="project_rae_smith.png"
