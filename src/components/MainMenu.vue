@@ -5,10 +5,10 @@ const menuItems = ref(['Home', 'About', 'Projects', 'Contact', 'CV'])
 </script>
 <template>
   <div
-    class="h-4/5 w-full md:w-1/2 fixed bottom-0 md:bottom-4 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 left-1/2 -translate-x-1/2 shadow-md flex flex-col items-center justify-center z-60"
+    class="h-4/5 w-full md:w-1/2 fixed bottom-0 md:bottom-4 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-700 left-1/2 -translate-x-1/2 shadow-md flex flex-col items-center justify-center z-60"
   >
     <div
-      class="text-2xl text-gray-600 dark:text-gray-300 flex flex-col items-center justify-center"
+      class="text-2xl text-neutral-600 dark:text-neutral-300 flex flex-col items-center justify-center"
     >
       <transition-group name="menu-items" appear>
         <p

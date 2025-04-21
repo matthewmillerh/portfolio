@@ -30,7 +30,7 @@ const sendMail = () => {
             placeholder="Name"
             name="from_name"
             :value="inputFieldReset"
-            class="rounded-md dark:bg-gray-700 bg-gray-100 inset-shadow-xs inset-shadow-black/50 dark:inset-shadow-black/75 w-full px-2 py-1 placeholder:text-gray-700 dark:placeholder:text-gray-300 outline-0 focus:shadow-sm dark:focus:shadow-md shadow-black/50 transition duration-300 ease-in-out"
+            class="rounded-md dark:bg-neutral-700 bg-neutral bg-neutral-100 inset-shadow-xs inset-shadow-black/50 dark:inset-shadow-black/75 w-full px-2 py-1 placeholder:text-neutral-700 dark:placeholder:text-neutral-300 outline-0 focus:shadow-sm dark:focus:shadow-md shadow-black/50 transition duration-300 ease-in-out"
             required
           />
         </p>
@@ -40,7 +40,7 @@ const sendMail = () => {
             placeholder="Email"
             name="email"
             :value="inputFieldReset"
-            class="rounded-md dark:bg-gray-700 bg-gray-100 inset-shadow-xs inset-shadow-black/50 dark:inset-shadow-black/75 w-full px-2 py-1 placeholder:text-gray-700 dark:placeholder:text-gray-300 outline-0 focus:shadow-sm dark:focus:shadow-md shadow-black/50 transition duration-300 ease-in-out"
+            class="rounded-md dark:bg-neutral-700 bg-neutral-100 inset-shadow-xs inset-shadow-black/50 dark:inset-shadow-black/75 w-full px-2 py-1 placeholder:text-neutral-700 dark:placeholder:text-neutral-300 outline-0 focus:shadow-sm dark:focus:shadow-md shadow-black/50 transition duration-300 ease-in-out"
             required
           />
         </p>
@@ -49,14 +49,14 @@ const sendMail = () => {
             placeholder="Message"
             name="message"
             :value="inputFieldReset"
-            class="rounded-md h-60 dark:bg-gray-700 bg-gray-100 inset-shadow-xs inset-shadow-black/50 dark:inset-shadow-black/75 w-full px-2 py-1 placeholder:text-gray-700 dark:placeholder:text-gray-300 outline-0 focus:shadow-sm dark:focus:shadow-md shadow-black/50 transition duration-300 ease-in-out"
+            class="rounded-md h-60 dark:bg-neutral-700 bg-neutral-100 inset-shadow-xs inset-shadow-black/50 dark:inset-shadow-black/75 w-full px-2 py-1 placeholder:text-neutral-700 dark:placeholder:text-neutral-300 outline-0 focus:shadow-sm dark:focus:shadow-md shadow-black/50 transition duration-300 ease-in-out"
             required
           ></textarea>
         </p>
         <button
           type="submit"
           name="send"
-          class="inline-flex items-center justify-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"
+          class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-neutral-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out"
         >
           <span>Submit</span>
         </button>

@@ -9,7 +9,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
       class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-4"
     >
       <div
-        class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-gray-300 dark:border-gray-500 shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+        class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-neutral-300 dark:border-neutral-500 shadow-md bg-gradient-to-br from-neutral-100 to-neutral-50 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75 transition-colors duration-300 ease-in-out"
       >
         <img :src="'/img/matthewmiller.JPEG'" alt="" class="max-h-72 rounded-md shadow-md" />
         <p
@@ -23,7 +23,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
         <p class="mt-4 font-semibold">I'm based in Cape Town, South Africa</p>
       </div>
       <div
-        class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-gray-300 dark:border-gray-500 bg-gradient-to-bl from-gray-100 to-gray-50 dark:bg-gradient-to-bl dark:from-gray-700/75 dark:to-gray-800/75 shadow-md rounded-md transition-colors duration-300 ease-in-out"
+        class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-neutral-300 dark:border-neutral-500 bg-gradient-to-bl from-neutral-100 to-neutral-50 dark:bg-gradient-to-bl dark:from-neutral-700/75 dark:to-neutral-800/75 shadow-md rounded-md transition-colors duration-300 ease-in-out"
       >
         <h1 class="text-4xl">Hi, I'm Matt</h1>
         <p class="text-xl mt-2">
@@ -34,7 +34,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
       </div>
     </div>
     <div
-      class="mt-12 py-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
+      class="mt-12 py-8 rounded-md shadow-md bg-neutral-50 dark:bg-neutral-700/30 transition-colors duration-300 ease-in-out"
     >
       <h1 class="text-center pb-2 text-4xl font-semibold">Tools I'm Currently Using</h1>
       <h2 class="text-center p-6 text-2xl">Frontend Development</h2>
@@ -162,7 +162,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
       </div>
     </div>
     <div
-      class="mt-12 py-8 px-8 rounded-md shadow-md bg-gray-50 dark:bg-gray-700/30 transition-colors duration-300 ease-in-out"
+      class="mt-12 py-8 px-8 rounded-md shadow-md bg-neutral-50 dark:bg-neutral-700/30 transition-colors duration-300 ease-in-out"
     >
       <h1 class="text-center mb-8 text-4xl font-semibold">My Projects</h1>
       <div
@@ -194,7 +194,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
       <div class="flex justify-center mt-6">
         <router-link to="/projects">
           <button
-            class="w-44 h-16 cursor-pointer flex justify-center items-center shadow-md rounded-xl font-semibold bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition duration-500 ease-in-out dark:hover:bg-gradient-to-br dark:hover:from-gray-700 dark:hover:to-gray-600 hover:bg-gradient-to-br hover:from-gray-200 hover:to-gray-100 dark:hover:shadow-lg dark:hover:shadow-gray-900 hover:shadow-gray-500 hover:shadow-lg"
+            class="w-44 h-16 cursor-pointer flex justify-center items-center shadow-md rounded-xl font-semibold bg-gradient-to-br from-neutral-100 to-neutral-200 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-700 transition duration-500 ease-in-out dark:hover:bg-gradient-to-br dark:hover:from-neutral-700 dark:hover:to-neutral-600 hover:bg-gradient-to-br hover:from-neutral-200 hover:to-neutral-100 dark:hover:shadow-lg dark:hover:shadow-neutral-900 hover:shadow-neutral-500 hover:shadow-lg"
           >
             <span class="mr-2"><font-awesome-icon icon="fa-diagram-project" size="sm" /></span>
             <span>View My Projects</span>

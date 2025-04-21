@@ -10,7 +10,7 @@ defineProps({
 </script>
 <template>
   <div
-    class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-br dark:from-gray-700/75 dark:to-gray-800/75 transition-colors duration-300 ease-in-out"
+    class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-neutral-100 to-neutral-50 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75 transition-colors duration-300 ease-in-out"
   >
     <a :href="liveLink" target="_blank" class="text-center">
       <h1 class="font-semibold">
@@ -23,7 +23,7 @@ defineProps({
       <img :src="'/img/' + imageName" alt="" class="mt-2 max-h-96 rounded-md shadow-md" />
     </a>
     <p
-      class="mt-4 py-1 px-2 w-full md:w-4/5 text-justify bg-gray-200/70 dark:bg-gray-700/70 rounded-lg shadow-md transition-colors duration-300 ease-in-out"
+      class="mt-4 py-1 px-2 w-full md:w-4/5 text-justify bg-neutral-200/70 dark:bg-neutral-700/70 rounded-lg shadow-md transition-colors duration-300 ease-in-out"
     >
       <slot name="description"></slot>
     </p>
@@ -35,7 +35,7 @@ defineProps({
         v-if="!(repoName == 'thephotographersgallery')"
         :href="liveLink"
         target="_blank"
-        class="inline-flex items-center justify-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"
+        class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out"
       >
         <span class="mr-2 font-semibold">Visit Live Site</span>
         <span><font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" /></span>
@@ -43,7 +43,7 @@ defineProps({
       <a
         :href="'https://github.com/matthewmillerh/' + repoName"
         target="_blank"
-        class="inline-flex items-center justify-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"
+        class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out"
       >
         <span class="mr-2 font-semibold">View Github Repo</span>
         <span><font-awesome-icon icon="fa-brands fa-github" size="xl" /></span>

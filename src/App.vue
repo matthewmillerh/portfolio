@@ -63,12 +63,12 @@ watch(menuOpen, () => {
   <header>
     <div class="fixed inset-x-0 top-0 z-40 min-h-24">
       <div
-        class="absolute inset-0 backdrop-blur-2xl dark:bg-gray-800/80 bg-white/50 transition-colors duration-500 ease-in-out"
+        class="absolute inset-0 backdrop-blur-2xl dark:bg-neutral-800/80 bg-white/50 transition-colors duration-500 ease-in-out"
         style="mask-image: linear-gradient(to bottom, black, black 80%, transparent)"
       ></div>
     </div>
     <nav
-      class="w-[95%] md:w-4/5 fixed flex flex-col gap-2 md:gap-8 md:flex-row md:justify-start items-start md:items-center px-4 py-2 top-4 left-1/2 -translate-x-1/2 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-gray-600 dark:to-gray-700 transition-colors duration-300 ease-in-out shadow-md z-60"
+      class="w-[95%] md:w-4/5 fixed flex flex-col gap-2 md:gap-8 md:flex-row md:justify-start items-start md:items-center px-4 py-2 top-4 left-1/2 -translate-x-1/2 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-800 transition-colors duration-300 ease-in-out shadow-md z-60"
     >
       <h1
         class="font-semibold text-2xl dark:text-white text-black transition-colors duration-300 ease-in-out"
@@ -85,7 +85,7 @@ watch(menuOpen, () => {
             v-model="darkMode"
           />
           <span
-            class="w-8 h-5 flex items-center flex-shrink-0 ml-1 mr-1 p-0.5 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-gray-500 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-3 pointer-events-none"
+            class="w-8 h-5 flex items-center flex-shrink-0 ml-1 mr-1 p-0.5 bg-neutral-300 rounded-full duration-300 ease-in-out peer-checked:bg-neutral-500 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-3 pointer-events-none"
           ></span>
           <label class="py-2 ml-2 dark:text-white text-black text-sm">Dark</label>
         </div>
@@ -93,14 +93,14 @@ watch(menuOpen, () => {
           <font-awesome-icon
             icon="fa-brands fa-linkedin"
             size="2xl"
-            class="p-1 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
+            class="p-1 text-neutral-600 dark:text-neutral-300 transition-colors duration-300 ease-in-out"
           />
         </a>
         <a href="https://github.com/matthewmillerh" target="_blank">
           <font-awesome-icon
             icon="fa-brands fa-square-github"
             size="2xl"
-            class="p-1 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-in-out"
+            class="p-1 text-neutral-600 dark:text-neutral-300 transition-colors duration-300 ease-in-out"
           />
         </a>
       </div>
@@ -109,7 +109,7 @@ watch(menuOpen, () => {
           <font-awesome-icon
             icon="fa-bars"
             size="2xl"
-            class="p-1 absolute text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out cursor-pointer"
+            class="p-1 absolute text-neutral-600 dark:text-neutral-300 transition-all duration-300 ease-in-out cursor-pointer"
             @click="toggleMenu"
             v-if="!menuOpen"
           />
@@ -118,7 +118,7 @@ watch(menuOpen, () => {
           <font-awesome-icon
             icon="fa-xmark"
             size="2xl"
-            class="p-1 text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out cursor-pointer"
+            class="p-1 text-neutral-600 dark:text-neutral-300 transition-all duration-300 ease-in-out cursor-pointer"
             @click="toggleMenu"
             v-if="menuOpen"
           />

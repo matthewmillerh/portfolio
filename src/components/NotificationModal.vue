@@ -26,14 +26,14 @@ const close = () => {
         class="modal rounded-md px-8 py-6 z-30 top-52 absolute left-1/2 -translate-x-1/2 font-semibold text-lg shadow-md flex flex-col items-center gap-4"
         :class="
           messageStatus == 1
-            ? 'dark:bg-gray-700/75 bg-gray-100/75'
+            ? 'dark:bg-neutral-700/75 bg-neutral-100/75'
             : 'dark:bg-red-900/75 bg-red-300/75'
         "
         @click.stop
       >
         <slot name="message"></slot>
         <button
-          class="inline-flex items-center justify-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out text-sm"
+          class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out text-sm"
           @click="close"
         >
           <span>Dismiss</span>
