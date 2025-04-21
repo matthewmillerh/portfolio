@@ -5,11 +5,7 @@ import NotificationModal from '@/components/NotificationModal.vue'
 
 const form = ref(null)
 const inputFieldReset = ref(null)
-const showNotification = ref(false)
-
-const closeNotification = () => {
-  showNotification.value = false
-}
+const messageStatus = ref(0)
 
 const sendMail = () => {
   emailjs.sendForm('service_qg7afqq', 'template_yrm6lm8', form.value, 'RyIXXr7-ppm95PWre').then(
@@ -66,8 +62,20 @@ const sendMail = () => {
         </button>
       </div>
     </form>
-    <NotificationModal v-if="showNotification" @close-modal="closeNotification">
-      <template #message>Thank you for your message, I will be in touch soon!</template>
+
+    <!-- Display a notification modal to indicate whether the message was successfully sent or failed. -->
+    <NotificationModal
+      v-if="messageStatus > 0"
+      @close-modal="messageStatus = 0"
+      :message-status="messageStatus"
+    >
+      <template #message>
+        <span v-if="messageStatus == 1">Thank you for your message, I will be in touch soon!</span>
+        <span v-if="messageStatus == 2">
+          An error has occurred, please send me an email at
+          <a href="mailto:matthewmillerh@outlook.com">matthewmillerh@outlook.com</a>
+        </span>
+      </template>
     </NotificationModal>
   </div>
 </template>
