@@ -1,9 +1,15 @@
 <script setup>
 import emailjs from '@emailjs/browser'
 import { ref } from 'vue'
+import NotificationModal from '@/components/NotificationModal.vue'
 
 const form = ref(null)
 const inputFieldReset = ref(null)
+const showNotification = ref(false)
+
+const closeNotification = () => {
+  showNotification.value = false
+}
 
 const sendMail = () => {
   emailjs.sendForm('service_qg7afqq', 'template_yrm6lm8', form.value, 'RyIXXr7-ppm95PWre').then(
@@ -56,9 +62,12 @@ const sendMail = () => {
           name="send"
           class="inline-flex items-center justify-center px-4 py-2 bg-gray-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-gray-300/50 dark:hover:bg-gray-600/50 transition-colors duration-300 ease-in-out"
         >
-          Submit
+          <span>Submit</span>
         </button>
       </div>
     </form>
+    <NotificationModal v-if="showNotification" @close-modal="closeNotification">
+      <template #message>Thank you for your message, I will be in touch soon!</template>
+    </NotificationModal>
   </div>
 </template>
