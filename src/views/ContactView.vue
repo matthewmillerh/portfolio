@@ -10,11 +10,11 @@ const messageStatus = ref(0)
 const sendMail = () => {
   emailjs.sendForm('service_qg7afqq', 'template_yrm6lm8', form.value, 'RyIXXr7-ppm95PWre').then(
     () => {
-      alert('Message sent!')
+      messageStatus.value = 1
       inputFieldReset.value = ''
     },
-    (error) => {
-      alert('Message not sent', error)
+    () => {
+      messageStatus.value = 2
     },
   )
 }
