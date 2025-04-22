@@ -12,6 +12,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // Import the Vue component
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+// Import v-viewer
+import 'viewerjs/dist/viewer.css'
+import VueViewer from 'v-viewer'
+
 // Import specific icons for use
 import {
   faUser,
@@ -58,6 +62,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+app.use(VueViewer)
 
 // Register the fontawesome component globally
 app.component('font-awesome-icon', FontAwesomeIcon)
