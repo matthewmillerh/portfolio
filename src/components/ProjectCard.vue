@@ -12,6 +12,7 @@ defineProps({
   <div
     class="flex min-h-[650px] w-full flex-col items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-50 p-6 shadow-md transition-colors duration-300 ease-in-out md:w-4/5 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75"
   >
+    <!-- project title and image (link to live site) -->
     <a :href="liveLink" target="_blank" class="text-center">
       <h1 class="font-semibold">
         <span><slot name="project-title"></slot></span>
@@ -22,6 +23,7 @@ defineProps({
       <p class="text-sm italic"><slot name="date"></slot></p>
       <img :src="'/img/' + imageName" alt="" class="mt-2 max-h-96 rounded-md shadow-md" />
     </a>
+    <!-- project description -->
     <p
       class="mt-4 w-full rounded-lg bg-neutral-200/70 px-2 py-1 text-justify shadow-md transition-colors duration-300 ease-in-out md:w-4/5 dark:bg-neutral-700/70"
     >
