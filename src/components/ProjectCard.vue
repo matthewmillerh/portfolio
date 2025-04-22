@@ -10,7 +10,7 @@ defineProps({
 </script>
 <template>
   <div
-    class="w-full md:w-4/5 min-h-[650px] p-6 flex justify-center flex-col items-center rounded-md shadow-md bg-gradient-to-br from-neutral-100 to-neutral-50 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75 transition-colors duration-300 ease-in-out"
+    class="flex min-h-[650px] w-full flex-col items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-50 p-6 shadow-md transition-colors duration-300 ease-in-out md:w-4/5 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75"
   >
     <a :href="liveLink" target="_blank" class="text-center">
       <h1 class="font-semibold">
@@ -19,23 +19,25 @@ defineProps({
           <font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" />
         </span>
       </h1>
-      <p class="italic text-sm"><slot name="date"></slot></p>
+      <p class="text-sm italic"><slot name="date"></slot></p>
       <img :src="'/img/' + imageName" alt="" class="mt-2 max-h-96 rounded-md shadow-md" />
     </a>
     <p
-      class="mt-4 py-1 px-2 w-full md:w-4/5 text-justify bg-neutral-200/70 dark:bg-neutral-700/70 rounded-lg shadow-md transition-colors duration-300 ease-in-out"
+      class="mt-4 w-full rounded-lg bg-neutral-200/70 px-2 py-1 text-justify shadow-md transition-colors duration-300 ease-in-out md:w-4/5 dark:bg-neutral-700/70"
     >
       <slot name="description"></slot>
     </p>
+
+    <!-- tech stack component fetches data from github api to display the stack used for the project -->
     <TechStack :repo-prop="repoName" />
 
     <!-- Button links to the project -->
-    <div class="mt-4 flex justify-center gap-2 flex-col md:flex-row">
+    <div class="mt-4 flex flex-col justify-center gap-2 md:flex-row">
       <a
         v-if="!(repoName == 'thephotographersgallery')"
         :href="liveLink"
         target="_blank"
-        class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out"
+        class="inline-flex cursor-pointer items-center justify-center rounded-md bg-neutral-300 px-4 py-2 shadow-md transition-colors duration-300 ease-in-out hover:bg-neutral-300/50 dark:bg-slate-600 dark:hover:bg-neutral-600/50"
       >
         <span class="mr-2 font-semibold">Visit Live Site</span>
         <span><font-awesome-icon icon="fa-arrow-up-right-from-square" size="sm" /></span>
@@ -43,7 +45,7 @@ defineProps({
       <a
         :href="'https://github.com/matthewmillerh/' + repoName"
         target="_blank"
-        class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out"
+        class="inline-flex cursor-pointer items-center justify-center rounded-md bg-neutral-300 px-4 py-2 shadow-md transition-colors duration-300 ease-in-out hover:bg-neutral-300/50 dark:bg-slate-600 dark:hover:bg-neutral-600/50"
       >
         <span class="mr-2 font-semibold">View Github Repo</span>
         <span><font-awesome-icon icon="fa-brands fa-github" size="xl" /></span>

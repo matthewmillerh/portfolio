@@ -27,7 +27,7 @@
         <img
           :src="'/img/matthewmiller_2.JPEG'"
           alt=""
-          class="max-w-64 cursor-pointer rounded-md shadow-md"
+          class="max-w-52 cursor-pointer rounded-md shadow-md"
         />
       </div>
     </div>
@@ -60,7 +60,7 @@
           </p>
         </div>
       </div>
-      <!-- text wrapper -->
+      <!-- text wrapper to create single flex item -->
       <div class="flex flex-col gap-4">
         <p>
           During my time as an artist, I discovered that my technical skills remained a valuable

@@ -19,21 +19,21 @@ const close = () => {
   <Transition name="modal-wrapper" @after-leave="$emit('close-modal')">
     <div
       v-if="show"
-      class="fixed top-0 bottom-0 left-0 right-0 z-20 bg-black/10 backdrop-blur-md"
+      class="fixed top-0 right-0 bottom-0 left-0 z-20 bg-black/10 backdrop-blur-md"
       @click="close"
     >
       <div
-        class="modal rounded-md px-8 py-6 z-30 top-52 absolute left-1/2 -translate-x-1/2 font-semibold text-lg shadow-md flex flex-col items-center gap-4"
+        class="modal absolute top-52 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center gap-4 rounded-md px-8 py-6 text-lg font-semibold shadow-md"
         :class="
           messageStatus == 1
-            ? 'dark:bg-neutral-700/75 bg-neutral-100/75'
-            : 'dark:bg-red-900/75 bg-red-300/75'
+            ? 'bg-neutral-100/75 dark:bg-neutral-700/75'
+            : 'bg-red-300/75 dark:bg-red-900/75'
         "
         @click.stop
       >
         <slot name="message"></slot>
         <button
-          class="inline-flex items-center justify-center px-4 py-2 bg-neutral-300 dark:bg-slate-600 rounded-md shadow-md cursor-pointer hover:bg-neutral-300/50 dark:hover:bg-neutral-600/50 transition-colors duration-300 ease-in-out text-sm"
+          class="inline-flex cursor-pointer items-center justify-center rounded-md bg-neutral-300 px-4 py-2 text-sm shadow-md transition-colors duration-300 ease-in-out hover:bg-neutral-300/50 dark:bg-slate-600 dark:hover:bg-neutral-600/50"
           @click="close"
         >
           <span>Dismiss</span>

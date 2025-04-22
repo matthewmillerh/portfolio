@@ -30,9 +30,8 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
       >
         <h1 class="text-4xl">Hi, I'm Matt</h1>
         <p class="mt-2 text-xl">
-          I create streamlined web solutions by simplifying the complex. I appreciate the beauty of
-          minimalism but also thrive when diving into the chaos and intricacies of challenging
-          projects.
+          I build streamlined web solutions by tackling complexity with simplicity. I embrace both
+          minimalist design and the challenge of intricate projects.
         </p>
       </div>
     </div>

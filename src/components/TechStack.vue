@@ -51,7 +51,6 @@ async function fetchTechStack() {
     languageList.value.sort((a, b) => b.bytes - a.bytes)
   } catch (error) {
     console.error('Error:', error)
-    //document.getElementById('language-list').innerHTML = '<li>Error loading tech stack</li>'
   }
 }
 
@@ -61,8 +60,8 @@ onMounted(() => {
 </script>
 <template>
   <div class="mt-4">
-    <!-- <h2 class="text-center">Tech Stack Used</h2> -->
-    <div class="h-3.5 flex bg-amber-50 overflow-hidden rounded-4xl shadow-md">
+    <div class="flex h-3.5 overflow-hidden rounded-4xl bg-amber-50 shadow-md">
+      <!-- loop through each language to create the tech stack bar -->
       <div
         v-for="(language, index) in languageList"
         :key="index"
@@ -77,11 +76,13 @@ onMounted(() => {
         :title="language.name + ': ' + language.percentage + '%'"
       ></div>
     </div>
+
+    <!-- list of languages used in the tech stack -->
     <ul class="text-sm">
-      <li v-for="(language, index) in languageList" :key="index" class="inline-block h-4 mt-1">
+      <li v-for="(language, index) in languageList" :key="index" class="mt-1 inline-block h-4">
         <p class="px-2">
           <span
-            class="h-2.5 w-2.5 inline-block rounded-full"
+            class="inline-block h-2.5 w-2.5 rounded-full"
             :style="'background-color: ' + languageColors[language.name] + ';'"
           ></span>
           <span class="px-1 font-semibold">{{

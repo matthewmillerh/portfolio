@@ -85,7 +85,7 @@ watch(
           ></span>
           <label class="ml-2 py-2 text-sm text-black dark:text-white">Dark</label>
         </div>
-        <a href="https://www.linkedin.com/in/matthew-miller-919bb7312/" target="_blank">
+        <a href="https://www.linkedin.com/in/matthew-jason-miller-919bb7312/" target="_blank">
           <font-awesome-icon
             icon="fa-brands fa-linkedin"
             size="2xl"

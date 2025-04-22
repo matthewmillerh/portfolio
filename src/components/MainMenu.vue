@@ -5,11 +5,12 @@ const menuItems = ref(['Home', 'About', 'Projects', 'Contact', 'CV'])
 </script>
 <template>
   <div
-    class="h-4/5 w-full md:w-1/2 fixed bottom-0 md:bottom-4 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-700 left-1/2 -translate-x-1/2 shadow-md flex flex-col items-center justify-center z-60"
+    class="fixed bottom-0 left-1/2 z-60 flex h-4/5 w-full -translate-x-1/2 flex-col items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 shadow-md md:bottom-4 md:w-3/4 xl:w-1/2 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-700"
   >
     <div
-      class="text-2xl text-neutral-600 dark:text-neutral-300 flex flex-col items-center justify-center"
+      class="flex flex-col items-center justify-center text-2xl text-neutral-600 dark:text-neutral-300"
     >
+      <!-- loop through each menu item and add increasing delay to the transition to create staggered display effect -->
       <transition-group name="menu-items" appear>
         <p
           v-for="(menuItem, index) in menuItems"
