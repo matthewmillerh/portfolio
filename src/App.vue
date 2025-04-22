@@ -15,6 +15,7 @@ watch(darkMode, (newDarkModeValue) => {
 })
 
 onMounted(() => {
+  // load the theme preference currently stored in localstorage
   const storedTheme = localStorage.getItem(themeStorageKey)
   if (storedTheme === 'true') {
     darkMode.value = true
@@ -27,7 +28,7 @@ onMounted(() => {
   setTheme(darkMode.value)
 })
 
-// set dark or light mode
+// set dark or light mode and store preference in localstorage
 function setTheme(isDarkMode) {
   const html = document.documentElement.classList
   if (isDarkMode) {
@@ -48,68 +49,65 @@ watch(
     menuOpen.value = false
   },
 )
-// prevents scrolling when the menu is open
-watch(menuOpen, () => {
-  const html = document.documentElement.classList
-  if (menuOpen.value) {
-    // html.add('overflow-hidden')
-  } else {
-    // html.remove('overflow-hidden')
-  }
-})
 </script>
 
 <template>
   <header>
+    <!-- Backdrop behind main nav bar to create a blur effect on content scrolling past -->
     <div class="fixed inset-x-0 top-0 z-40 min-h-24">
       <div
-        class="absolute inset-0 backdrop-blur-2xl dark:bg-neutral-800/80 bg-white/50 transition-colors duration-500 ease-in-out"
+        class="absolute inset-0 bg-white/50 backdrop-blur-2xl transition-colors duration-500 ease-in-out dark:bg-neutral-800/80"
         style="mask-image: linear-gradient(to bottom, black, black 80%, transparent)"
       ></div>
     </div>
+
+    <!-- Main nav menu -->
     <nav
-      class="w-[95%] md:w-4/5 fixed flex flex-col gap-2 md:gap-8 md:flex-row md:justify-start items-start md:items-center px-4 py-2 top-4 left-1/2 -translate-x-1/2 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-800 transition-colors duration-300 ease-in-out shadow-md z-60"
+      class="fixed top-4 left-1/2 z-60 flex w-[95%] -translate-x-1/2 flex-col items-start gap-2 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 px-4 py-2 shadow-md transition-colors duration-300 ease-in-out md:w-4/5 md:flex-row md:items-center md:justify-start md:gap-8 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-800"
     >
       <h1
-        class="font-semibold text-2xl dark:text-white text-black transition-colors duration-300 ease-in-out"
+        class="text-2xl font-semibold text-black transition-colors duration-300 ease-in-out dark:text-white"
       >
         <router-link to="/">Matthew Miller</router-link>
       </h1>
 
+      <!-- wrapper for theme toggle and link icons -->
       <div class="inline-flex items-center justify-center gap-4">
-        <div class="flex justify-start items-center relative">
-          <label class="py-2 mr-2 dark:text-white text-black text-sm">Light</label>
+        <div class="relative flex items-center justify-start">
+          <label class="mr-2 py-2 text-sm text-black dark:text-white">Light</label>
           <input
             type="checkbox"
-            class="absolute w-full h-10 peer appearance-none rounded-md cursor-pointer"
+            class="peer absolute h-10 w-full cursor-pointer appearance-none rounded-md"
             v-model="darkMode"
           />
           <span
-            class="w-8 h-5 flex items-center flex-shrink-0 ml-1 mr-1 p-0.5 bg-neutral-300 rounded-full duration-300 ease-in-out peer-checked:bg-neutral-500 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-3 pointer-events-none"
+            class="pointer-events-none mr-1 ml-1 flex h-5 w-8 flex-shrink-0 items-center rounded-full bg-neutral-300 p-0.5 duration-300 ease-in-out peer-checked:bg-neutral-500 after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-md after:duration-300 peer-checked:after:translate-x-3"
           ></span>
-          <label class="py-2 ml-2 dark:text-white text-black text-sm">Dark</label>
+          <label class="ml-2 py-2 text-sm text-black dark:text-white">Dark</label>
         </div>
         <a href="https://www.linkedin.com/in/matthew-miller-919bb7312/" target="_blank">
           <font-awesome-icon
             icon="fa-brands fa-linkedin"
             size="2xl"
-            class="p-1 text-neutral-600 dark:text-neutral-300 transition-colors duration-300 ease-in-out"
+            class="p-1 text-neutral-600 transition-colors duration-300 ease-in-out dark:text-neutral-300"
           />
         </a>
         <a href="https://github.com/matthewmillerh" target="_blank">
           <font-awesome-icon
             icon="fa-brands fa-square-github"
             size="2xl"
-            class="p-1 text-neutral-600 dark:text-neutral-300 transition-colors duration-300 ease-in-out"
+            class="p-1 text-neutral-600 transition-colors duration-300 ease-in-out dark:text-neutral-300"
           />
         </a>
       </div>
-      <div class="flex items-center absolute right-2 h-10 w-10">
+
+      <!-- Menu open and close icons -->
+      <div class="absolute right-2 flex h-10 w-10 items-center">
         <Transition>
           <font-awesome-icon
             icon="fa-bars"
             size="2xl"
-            class="p-1 absolute text-neutral-600 dark:text-neutral-300 transition-all duration-300 ease-in-out cursor-pointer"
+            class="absolute cursor-pointer p-1 text-neutral-600 transition-all duration-300 ease-in-out dark:text-neutral-300"
             @click="toggleMenu"
             v-if="!menuOpen"
           />
@@ -118,7 +116,7 @@ watch(menuOpen, () => {
           <font-awesome-icon
             icon="fa-xmark"
             size="2xl"
-            class="p-1 text-neutral-600 dark:text-neutral-300 transition-all duration-300 ease-in-out cursor-pointer"
+            class="cursor-pointer p-1 text-neutral-600 transition-all duration-300 ease-in-out dark:text-neutral-300"
             @click="toggleMenu"
             v-if="menuOpen"
           />
@@ -127,24 +125,28 @@ watch(menuOpen, () => {
     </nav>
   </header>
 
-  <div class="mt-40 z-10">
+  <!-- Main RouterView content -->
+  <div class="z-10 mt-40">
     <RouterView />
   </div>
 
+  <!-- Main menu component -->
   <Transition name="menu">
     <MainMenu v-if="menuOpen"></MainMenu>
   </Transition>
-  <Transition
-    ><div
+
+  <!-- Background blur when main menu is open -->
+  <Transition>
+    <div
       v-if="menuOpen"
-      class="z-50 fixed inset-0 backdrop-blur-2xl bg-black/30"
+      class="fixed inset-0 z-50 bg-black/30 backdrop-blur-2xl"
       @click="toggleMenu"
-    ></div
-  ></Transition>
+    ></div>
+  </Transition>
 </template>
 
 <style scoped>
-/* Transitions for menu icons */
+/* Transitions for menu icons and main menu background blur */
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.3s ease-in-out;

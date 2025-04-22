@@ -3,7 +3,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 </script>
 <template>
   <main>
-    <div class="w-full flex flex-col items-center gap-8">
+    <div class="flex w-full flex-col items-center gap-8">
       <h1 class="text-4xl font-semibold">My Projects</h1>
 
       <!-- Artist portfolio website -->

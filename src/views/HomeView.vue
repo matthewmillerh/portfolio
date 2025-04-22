@@ -6,14 +6,15 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
 <template>
   <main>
     <div
-      class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-4"
+      class="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:justify-evenly"
     >
+      <!-- Section containing image of myself -->
       <div
-        class="w-full md:w-1/2 h-96 p-6 flex justify-center flex-col items-center border-b-4 rounded-md border-neutral-300 dark:border-neutral-500 shadow-md bg-gradient-to-br from-neutral-100 to-neutral-50 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75 transition-colors duration-300 ease-in-out"
+        class="flex h-96 w-full flex-col items-center justify-center rounded-md border-b-4 border-neutral-300 bg-gradient-to-br from-neutral-100 to-neutral-50 p-6 shadow-md transition-colors duration-300 ease-in-out md:w-1/2 dark:border-neutral-500 dark:bg-gradient-to-br dark:from-neutral-700/75 dark:to-neutral-800/75"
       >
         <img :src="'/img/matthewmiller.JPEG'" alt="" class="max-h-72 rounded-md shadow-md" />
         <p
-          class="-mt-10 flex items-center bg-black/50 backdrop-blur-xs px-2 py-1 rounded-xl text-white"
+          class="-mt-10 flex items-center rounded-xl bg-black/50 px-2 py-1 text-white backdrop-blur-xs"
         >
           <font-awesome-icon icon="fa-location-dot" size="lg" class="mr-2" />
           <a href="https://maps.app.goo.gl/R6XXiDs4XcSgxh54A" class="hover:underline"
@@ -22,22 +23,26 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
         </p>
         <p class="mt-4 font-semibold">I'm based in Cape Town, South Africa</p>
       </div>
+
+      <!-- Short about me section -->
       <div
-        class="p-6 w-full md:w-1/2 min-h-96 flex justify-center flex-col border-t-4 border-r-4 border-neutral-300 dark:border-neutral-500 bg-gradient-to-bl from-neutral-100 to-neutral-50 dark:bg-gradient-to-bl dark:from-neutral-700/75 dark:to-neutral-800/75 shadow-md rounded-md transition-colors duration-300 ease-in-out"
+        class="flex min-h-96 w-full flex-col justify-center rounded-md border-t-4 border-r-4 border-neutral-300 bg-gradient-to-bl from-neutral-100 to-neutral-50 p-6 shadow-md transition-colors duration-300 ease-in-out md:w-1/2 dark:border-neutral-500 dark:bg-gradient-to-bl dark:from-neutral-700/75 dark:to-neutral-800/75"
       >
         <h1 class="text-4xl">Hi, I'm Matt</h1>
-        <p class="text-xl mt-2">
+        <p class="mt-2 text-xl">
           I create streamlined web solutions by simplifying the complex. I appreciate the beauty of
           minimalism but also thrive when diving into the chaos and intricacies of challenging
           projects.
         </p>
       </div>
     </div>
+
+    <!-- skills section -->
     <div
-      class="mt-12 py-8 rounded-md shadow-md bg-neutral-50 dark:bg-neutral-700/30 transition-colors duration-300 ease-in-out"
+      class="mt-12 rounded-md bg-neutral-50 py-8 shadow-md transition-colors duration-300 ease-in-out dark:bg-neutral-700/30"
     >
-      <h1 class="text-center pb-2 text-4xl font-semibold">Tools I'm Currently Using</h1>
-      <h2 class="text-center p-6 text-2xl">Frontend Development</h2>
+      <h1 class="pb-2 text-center text-4xl font-semibold">Tools I'm Currently Using</h1>
+      <h2 class="p-6 text-center text-2xl">Frontend Development</h2>
       <div>
         <ul class="text-center">
           <TechLabel>
@@ -91,7 +96,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
           </TechLabel>
         </ul>
       </div>
-      <h2 class="text-center p-6 mt-6 text-2xl">Backend Development</h2>
+      <h2 class="mt-6 p-6 text-center text-2xl">Backend Development</h2>
       <div>
         <ul class="text-center">
           <TechLabel>
@@ -125,7 +130,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
           </TechLabel>
         </ul>
       </div>
-      <h2 class="text-center p-6 mt-6 text-2xl">Databases</h2>
+      <h2 class="mt-6 p-6 text-center text-2xl">Databases</h2>
       <div>
         <ul class="text-center">
           <TechLabel>
@@ -149,7 +154,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
           </TechLabel>
         </ul>
       </div>
-      <h2 class="text-center p-6 mt-6 text-2xl">Version Control</h2>
+      <h2 class="mt-6 p-6 text-center text-2xl">Version Control</h2>
       <div>
         <ul class="text-center">
           <TechLabel>
@@ -161,12 +166,14 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
         </ul>
       </div>
     </div>
+
+    <!-- Projects section -->
     <div
-      class="mt-12 py-8 px-8 rounded-md shadow-md bg-neutral-50 dark:bg-neutral-700/30 transition-colors duration-300 ease-in-out"
+      class="mt-12 rounded-md bg-neutral-50 px-8 py-8 shadow-md transition-colors duration-300 ease-in-out dark:bg-neutral-700/30"
     >
-      <h1 class="text-center mb-8 text-4xl font-semibold">My Projects</h1>
+      <h1 class="mb-8 text-center text-4xl font-semibold">My Projects</h1>
       <div
-        class="w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-8"
+        class="flex w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-evenly"
       >
         <ProjectPreviewCard
           image-name="project_rae_smith.png"
@@ -182,7 +189,7 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
         </ProjectPreviewCard>
       </div>
       <div
-        class="mt-8 w-full flex md:justify-evenly justify-center items-center flex-col md:flex-row gap-8"
+        class="mt-8 flex w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-evenly"
       >
         <ProjectPreviewCard
           image-name="project_itinerary.png"
@@ -191,10 +198,10 @@ import ProjectPreviewCard from '@/components/ProjectPreviewCard.vue'
           <template #project-title>Travel Itinerary Website</template>
         </ProjectPreviewCard>
       </div>
-      <div class="flex justify-center mt-6">
+      <div class="mt-6 flex justify-center">
         <router-link to="/projects">
           <button
-            class="w-44 h-16 cursor-pointer flex justify-center items-center shadow-md rounded-xl font-semibold bg-gradient-to-br from-neutral-100 to-neutral-200 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-700 transition duration-500 ease-in-out dark:hover:bg-gradient-to-br dark:hover:from-neutral-700 dark:hover:to-neutral-600 hover:bg-gradient-to-br hover:from-neutral-200 hover:to-neutral-100 dark:hover:shadow-lg dark:hover:shadow-neutral-900 hover:shadow-neutral-500 hover:shadow-lg"
+            class="flex h-16 w-44 cursor-pointer items-center justify-center rounded-xl bg-gradient-to-br from-neutral-100 to-neutral-200 font-semibold shadow-md transition duration-500 ease-in-out hover:bg-gradient-to-br hover:from-neutral-200 hover:to-neutral-100 hover:shadow-lg hover:shadow-neutral-500 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-700 dark:hover:bg-gradient-to-br dark:hover:from-neutral-700 dark:hover:to-neutral-600 dark:hover:shadow-lg dark:hover:shadow-neutral-900"
           >
             <span class="mr-2"><font-awesome-icon icon="fa-diagram-project" size="sm" /></span>
             <span>View My Projects</span>
