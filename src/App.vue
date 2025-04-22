@@ -63,7 +63,7 @@ watch(
 
     <!-- Main nav menu -->
     <nav
-      class="fixed top-4 left-1/2 z-60 flex w-[95%] -translate-x-1/2 flex-col items-start gap-2 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 px-4 py-2 shadow-md transition-colors duration-300 ease-in-out md:w-4/5 md:flex-row md:items-center md:justify-start md:gap-8 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-800"
+      class="fixed top-4 left-1/2 z-60 flex w-[95%] -translate-x-1/2 flex-col items-start gap-2 rounded-md bg-gradient-to-br from-neutral-100 to-neutral-200 px-4 py-2 shadow-md transition-colors duration-300 ease-in-out lg:w-4/5 lg:flex-row lg:items-center lg:justify-start lg:gap-8 dark:bg-gradient-to-br dark:from-neutral-600 dark:to-neutral-800"
     >
       <h1
         class="text-2xl font-semibold text-black transition-colors duration-300 ease-in-out dark:text-white"
