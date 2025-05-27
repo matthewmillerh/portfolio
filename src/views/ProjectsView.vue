@@ -24,7 +24,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
       <!-- Online Store for small business -->
       <ProjectCard
         image-name="project_pentique.png"
-        repo-name="pentique"
+        repo-name="pentiquev2"
         live-link="http://www.pentique.co.za"
       >
         <template #project-title>Online Store for Small Business</template>
